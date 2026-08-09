@@ -25,6 +25,58 @@ If you downloaded the ZIP file, unzip it first. On macOS, if the folder is in Do
 ```bash
 cd ~/Downloads/us_macro_equity_crash_alarm
 
+2. Install the required Python packages
+pip install -r requirements.txt
+
+If pip does not work, try:
+
+python3 -m pip install -r requirements.txt
+3. Set your FRED API key
+
+The model downloads economic data from FRED, so you need a free FRED API key.
+
+On macOS / Linux:
+
+export FRED_API_KEY="YOUR_FRED_API_KEY"
+
+On Windows PowerShell:
+
+$env:FRED_API_KEY="YOUR_FRED_API_KEY"
+
+Do not put your real API key inside macro_alarm.py or upload it to GitHub.
+
+4. Run the model
+python macro_alarm.py
+
+On many Macs, use:
+
+python3 macro_alarm.py
+
+The program retrieves the latest available FRED data and prints an overall risk level:
+
+GREEN
+YELLOW
+ORANGE
+RED
+
+It also shows the status and explanation for each individual economic or market indicator.
+
+5. Check the generated snapshot
+
+After a successful run, the program creates:
+
+macro_alarm_snapshot.json
+
+This file contains the current overall score and individual indicator results.
+
+
+### 在 GitHub 上怎么加
+
+进入你的 repository → 点击 `README.md` → 点击右上方的 **铅笔 Edit** 图标 → 找到：
+
+```text
+## What the Model Monitors
+
 ## What the Model Monitors
 
 The current version uses nine indicators from FRED:
