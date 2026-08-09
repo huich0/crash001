@@ -1,0 +1,8 @@
+us_macro_equity_crash_alarm/
+├── macro_alarm.py
+├── README.md
+├── requirements.txt
+├── config.yaml
+├── sample_output.json
+├── .env.example
+└── .gitignore

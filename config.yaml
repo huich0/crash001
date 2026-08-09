@@ -1,0 +1,61 @@
+# U.S. Macro / Equity Crash Alarm configuration
+#
+# Thresholds are heuristic defaults and should be validated with historical backtests.
+
+model:
+  green_max_ratio: 0.20
+  yellow_max_ratio: 0.40
+  orange_max_ratio: 0.60
+  fed_constrained_overlay_points: 1.5
+  fed_constrained_core_pce_min: 3.0
+  fed_constrained_min_growth_credit_signals: 2
+
+thresholds:
+  sahm_rule:
+    yellow: 0.30
+    red: 0.50
+
+  high_yield_oas:
+    yellow: 4.0
+    red: 6.0
+
+  core_pce_yoy:
+    yellow: 3.0
+    red: 4.0
+
+  treasury_10y:
+    yellow: 5.0
+    red: 5.5
+
+  initial_claims_vs_52w_low:
+    yellow: 15.0
+    red: 30.0
+
+  industrial_production_yoy:
+    yellow_below: 0.0
+    red_below: -2.0
+
+  real_gdp_qoq_annualized:
+    yellow_below: 1.0
+    red_below: 0.0
+
+  sp500_drawdown:
+    yellow_below: -10.0
+    red_below: -20.0
+
+  yield_curve_10y_3m:
+    deep_inversion: -0.50
+    resteepen_yellow: 0.0
+    resteepen_red: 0.75
+    lookback_months: 24
+
+weights:
+  sahm_rule: 2.0
+  high_yield_oas: 2.0
+  core_pce_yoy: 1.5
+  initial_claims: 1.5
+  treasury_10y: 1.0
+  yield_curve_10y_3m: 1.0
+  industrial_production: 1.0
+  real_gdp: 1.0
+  sp500_drawdown: 0.5

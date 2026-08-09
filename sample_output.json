@@ -1,0 +1,58 @@
+{
+  "generated_at_utc": "2026-08-09T14:00:00+00:00",
+  "overall": "YELLOW",
+  "score": 3.25,
+  "max_score": 13.0,
+  "fed_constrained": false,
+  "growth_credit_stress_count": 2,
+  "signals": [
+    {
+      "name": "Sahm Rule",
+      "value": 0.15,
+      "status": "GREEN",
+      "points": 0.0,
+      "max_points": 2.0,
+      "explanation": "< 0.30: no Sahm labor-market alarm."
+    },
+    {
+      "name": "High-Yield OAS",
+      "value": 3.1,
+      "status": "GREEN",
+      "points": 0.0,
+      "max_points": 2.0,
+      "explanation": "< 4%: credit market is not signaling broad stress."
+    },
+    {
+      "name": "Core PCE YoY",
+      "value": 3.4,
+      "status": "YELLOW",
+      "points": 0.75,
+      "max_points": 1.5,
+      "explanation": "3-4%: inflation remains above a comfortable range."
+    },
+    {
+      "name": "10Y Treasury",
+      "value": 4.6,
+      "status": "GREEN",
+      "points": 0.0,
+      "max_points": 1.0,
+      "explanation": "< 5%: no standalone long-rate alarm."
+    },
+    {
+      "name": "10Y-3M Curve",
+      "value": 0.45,
+      "status": "YELLOW",
+      "points": 0.5,
+      "max_points": 1.0,
+      "explanation": "Curve is positive after a prior deep inversion; watch labor and credit confirmation."
+    },
+    {
+      "name": "Initial Claims vs 52w Low",
+      "value": 18.4,
+      "status": "YELLOW",
+      "points": 0.75,
+      "max_points": 1.5,
+      "explanation": "Claims are 15-30% above the 52-week low."
+    }
+  ]
+}
