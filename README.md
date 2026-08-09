@@ -14,6 +14,16 @@ The model outputs one of four overall risk levels:
 It also reports each underlying indicator separately so you can see *why* the model is becoming more or less cautious.
 
 ---
+## Quick Start
+
+Follow these steps after downloading or cloning the project.
+
+### 1. Open the project folder in Terminal
+
+If you downloaded the ZIP file, unzip it first. On macOS, if the folder is in Downloads:
+
+```bash
+cd ~/Downloads/us_macro_equity_crash_alarm
 
 ## What the Model Monitors
 
