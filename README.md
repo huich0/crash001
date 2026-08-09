@@ -69,7 +69,7 @@ macro_alarm_snapshot.json
 
 This file contains the current overall score and individual indicator results.
 
-
+---
 ## What the Model Monitors
 
 The current version uses nine indicators from FRED:
