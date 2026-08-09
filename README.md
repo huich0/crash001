@@ -14,60 +14,43 @@ The model outputs one of four overall risk levels:
 It also reports each underlying indicator separately so you can see *why* the model is becoming more or less cautious.
 
 ---
-## Quick Start
+## Quick Start -  macOS
 
-Follow these steps after downloading or cloning the project.
+1. **Open the project folder in Terminal.** If you downloaded the ZIP file, unzip it first. On macOS, if the folder is in Downloads, run: `cd ~/Downloads/us_macro_equity_crash_alarm`
 
-### 1. Open the project folder in Terminal
+2. **Install the required Python packages.** Run: `pip install -r requirements.txt` If `pip` does not work, try: `python3 -m pip install -r requirements.txt`
 
-If you downloaded the ZIP file, unzip it first. On macOS, if the folder is in Downloads:
+3. **Get and set your FRED API key.** After obtaining a free FRED API key, on macOS/Linux run: `export FRED_API_KEY="YOUR_FRED_API_KEY"` On Windows PowerShell run: `$env:FRED_API_KEY="YOUR_FRED_API_KEY"` Do not put your real API key inside `macro_alarm.py` or upload it to GitHub.
 
-```bash
-cd ~/Downloads/us_macro_equity_crash_alarm
+4. **Run the model.** Run: `python macro_alarm.py` On many Macs, use: `python3 macro_alarm.py`
 
-### 2. Install the required Python packages
-pip install -r requirements.txt
+5. **Review the results.** The program retrieves the latest available FRED data and displays an overall risk level: **GREEN, YELLOW, ORANGE, or RED**. It also shows the status and explanation for each individual macroeconomic and market indicator.
 
-If pip does not work, try:
+6. **Check the generated snapshot.** After a successful run, the program creates `macro_alarm_snapshot.json`, which contains the current overall risk score and individual indicator results.
 
-python3 -m pip install -r requirements.txt
-### 3. Set your FRED API key
+## Quick Start — Windows 11
 
-The model downloads economic data from FRED, so you need a free FRED API key.
+1. **Download and unzip the project.** Download the project ZIP file and extract it to a folder, for example: `C:\Users\YourName\Downloads\us_macro_equity_crash_alarm`
 
-On macOS / Linux:
+2. **Open Windows Terminal or PowerShell.** Click the Windows **Start** button, search for `PowerShell` or `Terminal`, and open it.
 
-export FRED_API_KEY="YOUR_FRED_API_KEY"
+3. **Go to the project folder.** In PowerShell, run: `cd C:\Users\YourName\Downloads\us_macro_equity_crash_alarm` Replace `YourName` with your actual Windows username. An easier option is to open the project folder in File Explorer, right-click inside the folder, and select **Open in Terminal**.
 
-On Windows PowerShell:
+4. **Check that Python is installed.** Run: `python --version` If that does not work, try: `py --version` You should see a Python version such as `Python 3.x.x`. If Python is not installed, install Python 3 before continuing.
 
-$env:FRED_API_KEY="YOUR_FRED_API_KEY"
+5. **Install the required Python packages.** Run: `python -m pip install -r requirements.txt` If your Windows installation uses the Python launcher instead, run: `py -m pip install -r requirements.txt`
 
-Do not put your real API key inside macro_alarm.py or upload it to GitHub.
+6. **Get a FRED API key.** Create a free FRED API key from the Federal Reserve Bank of St. Louis. The model needs this key to retrieve current economic data.
 
-### 4. Run the model
-python macro_alarm.py
+7. **Set your FRED API key in PowerShell.** Run: `$env:FRED_API_KEY="YOUR_FRED_API_KEY"` Replace `YOUR_FRED_API_KEY` with your actual FRED API key. Do not put your real API key inside `macro_alarm.py`, `.env.example`, or any file that you upload to a public GitHub repository.
 
-On many Macs, use:
+8. **Run the model.** Run: `python macro_alarm.py` If that command does not work but `py --version` worked earlier, run: `py macro_alarm.py`
 
-python3 macro_alarm.py
+9. **Review the results.** The program will download the latest available FRED economic and financial data and display an overall risk level: **GREEN, YELLOW, ORANGE, or RED**. It will also display the status, value, score, and explanation for each individual indicator.
 
-The program retrieves the latest available FRED data and prints an overall risk level:
+10. **Check the generated snapshot.** After a successful run, the program creates `macro_alarm_snapshot.json` in the project folder. This file contains the current overall risk score and the individual indicator results.
 
-GREEN
-YELLOW
-ORANGE
-RED
-
-It also shows the status and explanation for each individual economic or market indicator.
-
-### 5. Check the generated snapshot
-
-After a successful run, the program creates:
-
-macro_alarm_snapshot.json
-
-This file contains the current overall score and individual indicator results.
+11. **Run the model again later.** Each time you open a new PowerShell window, set the FRED API key again with `$env:FRED_API_KEY="YOUR_FRED_API_KEY"` and then run `python macro_alarm.py`. This allows you to rerun the model whenever new economic data becomes available.
 
 ---
 ## What the Model Monitors
